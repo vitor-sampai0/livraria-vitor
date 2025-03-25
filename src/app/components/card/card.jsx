@@ -1,6 +1,6 @@
 import styles from "./card.module.css";
 
-const Card = ({ title, author, price, coverImage, rating, tags }) => {
+const Card = ({ title, author, price, coverImage, rating, tags, novo }) => {
   const renderStars = (rating) => {
     const stars = [];
     const fullStars = Math.floor(rating);
@@ -42,6 +42,7 @@ const Card = ({ title, author, price, coverImage, rating, tags }) => {
           <button className={styles.quickViewButton}>Visualizar</button>
         </div>
         <div className={styles.bookInfo}>
+          <span className={styles.newBadge}>Novo</span>
           <h3 className={styles.bookTitle}>{title}</h3>
           <p className={styles.bookAuthor}>por {author}</p>
           <div className={styles.bookRating}>
