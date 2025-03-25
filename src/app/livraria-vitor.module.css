@@ -1,0 +1,426 @@
+:root {
+  --primary-color: #26c485; /* Verde-água/turquesa como na roupa do Tanjiro */
+  --primary-light: #5edda9;
+  --primary-dark: #0f9965;
+  --secondary-color: #ff5978; /* Rosa como o uniforme da Nezuko */
+  --background-color: #f5f5f5;
+  --text-color: #333333;
+  --light-text: #757575;
+  --white: #ffffff;
+  --black: #202020; /* Para detalhes escuros como no uniforme dos Hashira */
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --error-color: #cf6679;
+  --success-color: #4caf50;
+  --warning-color: #ff9800;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --border-radius: 8px;
+}
+
+/* CONTAINER E ESTILOS BASE */
+.bookstoreContainer {
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+.resetBox {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.listItem {
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER STYLES */
+
+
+/* HERO BANNER STYLES */
+
+/* BOOK SECTION STYLES */
+
+/* CATEGORIES SECTION STYLES */
+
+/* NEW RELEASES SECTION STYLES */
+
+
+/* SUBSCRIPTION SECTION STYLES */
+
+
+/* SHOPPING CART STYLES */
+.shoppingCart {
+  position: fixed;
+  top: 0;
+  right: -400px; /* Hidden by default */
+  width: 380px;
+  height: 100vh;
+  background-color: var(--white);
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+  box-sizing: border-box;
+}
+
+.shoppingCartOpen {
+  right: 0;
+}
+
+.cartHeader {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-300);
+  box-sizing: border-box;
+}
+
+.cartHeaderTitle {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin: 0;
+  font-family: inherit;
+}
+
+.closeButton {
+  font-size: 1.5rem;
+  color: var(--light-text);
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+}
+
+.closeButton:hover {
+  color: var(--error-color);
+}
+
+.cartItems {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.emptyCartMessage {
+  text-align: center;
+  color: var(--light-text);
+  padding: 2rem 0;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--gray-200);
+  box-sizing: border-box;
+}
+
+.itemInfo {
+  flex: 1;
+}
+
+.itemTitle {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+}
+
+.itemDetails {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--light-text);
+}
+
+.itemQuantity {
+  margin: 0;
+}
+
+.itemPrice {
+  margin: 0;
+}
+
+.removeButton {
+  color: var(--light-text);
+  font-size: 1rem;
+  padding: 0.3rem;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+}
+
+.removeButton:hover {
+  color: var(--error-color);
+}
+
+.cartFooter {
+  padding: 1.5rem;
+  border-top: 1px solid var(--gray-300);
+  box-sizing: border-box;
+}
+
+.cartTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.totalLabel {
+  font-weight: bold;
+  margin: 0;
+}
+
+.totalValue {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.checkoutButton {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+  transition: var(--transition);
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+.checkoutButton:hover {
+  background-color: var(--primary-dark);
+}
+
+/* FOOTER STYLES */
+
+
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 150;
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.overlayActive {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* SCROLL TO TOP BUTTON */
+.scrollTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: var(--box-shadow);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  z-index: 100;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+.scrollTopVisible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scrollTop:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 1024px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .mainNav {
+    display: none;
+  }
+
+  .searchInput {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerActions {
+    gap: 1rem;
+  }
+
+  .searchBar {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+
+  .heroHeading {
+    font-size: 2rem;
+  }
+
+  .bookSection,
+  .categoriesSection {
+    padding: 1.5rem;
+  }
+
+  .booksGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .categoriesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .shoppingCart {
+    width: 320px;
+  }
+
+  .footer {
+    padding: 2rem 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .logoHeading {
+    font-size: 1.5rem;
+  }
+
+  .headerActions {
+    gap: 0.5rem;
+  }
+
+  .searchBar {
+    max-width: 150px;
+  }
+
+  .heroHeading {
+    font-size: 1.8rem;
+  }
+
+  .heroParagraph {
+    font-size: 1rem;
+  }
+
+  .sectionHeading {
+    font-size: 1.5rem;
+  }
+
+  .booksGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bookCover {
+    height: 220px;
+  }
+
+  .categoriesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .subscriptionForm {
+    flex-direction: column;
+  }
+
+  .subscriptionInput {
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+  }
+
+  .subscribeButton {
+    border-radius: var(--border-radius);
+  }
+
+  .shoppingCart {
+    width: 100%;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* ANIMATION STYLES */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
